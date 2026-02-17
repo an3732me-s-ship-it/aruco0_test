@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AR Emergency Test</title>
+    <title>Original ArUco Test</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
-
   <body style="margin: 0; overflow: hidden;">
     <a-scene 
       embedded 
-      arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 4x4_50; debugUIEnabled: true;">
+      arjs="sourceType: webcam; 
+            detectionMode: mono_and_matrix; 
+            matrixCodeType: ARUCO_ORIGINAL; 
+            labelingMode: black_region;
+            debugUIEnabled: true;">
 
       <a-marker type="barcode" value="0">
-        <a-box position="0 0.5 0" material="color: red;"></a-box>
+        <a-box position="0 0.5 0" material="color: red; opacity: 0.8;"></a-box>
       </a-marker>
 
       <a-entity camera></a-entity>
